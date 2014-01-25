@@ -1,0 +1,1 @@
+We ignored all source data but for the *SFR05_2014_Underlying_data.zip* file, as our intention is to prepare the data for exploration witout necessarily considering the conclusions already made by the publisher.
