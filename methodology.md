@@ -75,6 +75,15 @@ The output file is:
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
+####Source: *SFR05_2014_UD_residency.csv*
+
+The output files are:
+- *Achievements_by_region_IDACI_rurality.csv*
+- *Achievements_by_region_and_rurality_detail.csv*
+- *Achievements_by_LAD.csv*
+
+The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
+
 ##Process
 
 ##Solution
