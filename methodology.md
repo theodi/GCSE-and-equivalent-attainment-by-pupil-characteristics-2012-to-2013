@@ -7,7 +7,7 @@ Process
 
 ###Stage 1
 
-After a first analysis of the set of files that were published, we originally decided to ignore all data but for the contents of the SFR05_2014_Underlying_data.zip file, as our intention was to prepare the data for exploration without necessarily considering the conclusions that the publisher has already drawn. Its content are in the [*01_stage_1*](processed/data/01_stage_1/) folder.
+After a first analysis of the set of files that were published, we originally decided to ignore all data but for the contents of the [*SFR05_2014_Underlying_data.zip*](data/raw/SFR05_2014_Underlying_data.zip) file, as our intention was to prepare the data for exploration without necessarily considering the conclusions that the publisher has already drawn. The zip file's contents are in the [*01_stage_1*](data/processed/01_stage_1/) folder.
 
 Among the contents, [*SFR05_2014_UD_metadata.txt*](data/processed/01_stage_1/SFR05_2014_UD_metadata.txt) was identified as their key. The file describes elements of the source datafiles' background, coverage, data quality and statistical disclosure (anonymisation). The document also has a full explaination of the acronyms used in the data and a description of the variable names. 
 
