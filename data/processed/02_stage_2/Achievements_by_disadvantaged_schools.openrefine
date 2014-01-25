@@ -1,0 +1,22 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code_9_digit",
+    "columnName": "Country_code_9_digit"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_name",
+    "columnName": "Country_name"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code",
+    "columnName": "Country_code"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Characteristic",
+    "columnName": "Characteristic"
+  }
+]

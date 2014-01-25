@@ -1,0 +1,78 @@
+[
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "row.flagged",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Flagged Rows",
+          "omitBlank": false,
+          "columnName": "",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code_9_digit",
+    "columnName": "Country_code_9_digit"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code",
+    "columnName": "Country_code"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_name",
+    "columnName": "Country_name"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Characteristic",
+    "columnName": "Characteristic"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "row.flagged",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Flagged Rows",
+          "omitBlank": false,
+          "columnName": "",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  }
+]

@@ -1,0 +1,359 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code_9_digit",
+    "columnName": "Country_code_9_digit"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_name",
+    "columnName": "Country_name"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code",
+    "columnName": "Country_code"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "row.starred",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Starred Rows",
+          "omitBlank": false,
+          "columnName": "",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "record-based"
+    }
+  },
+  {
+    "op": "core/row-star",
+    "description": "Star rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MAJOR",
+                "l": "ETHNICGROUP_MAJOR"
+              }
+            },
+            {
+              "v": {
+                "v": "ETHNICGROUP_MINOR",
+                "l": "ETHNICGROUP_MINOR"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "record-based"
+    },
+    "starred": true
+  },
+  {
+    "op": "core/row-star",
+    "description": "Unstar rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MAJOR",
+                "l": "ETHNICGROUP_MAJOR"
+              }
+            },
+            {
+              "v": {
+                "v": "ETHNICGROUP_MINOR",
+                "l": "ETHNICGROUP_MINOR"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "record-based"
+    },
+    "starred": false
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column Major_characteristic_category at index 2 based on column Characteristic_category using expression grel:value",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MAJOR",
+                "l": "ETHNICGROUP_MAJOR"
+              }
+            },
+            {
+              "v": {
+                "v": "ETHNICGROUP_MINOR",
+                "l": "ETHNICGROUP_MINOR"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "record-based"
+    },
+    "newColumnName": "Major_characteristic_category",
+    "columnInsertIndex": 2,
+    "baseColumnName": "Characteristic_category",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column Major_characteristic_category to position 1",
+    "columnName": "Major_characteristic_category",
+    "index": 1
+  },
+  {
+    "op": "core/row-flag",
+    "description": "Flag rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MAJOR",
+                "l": "ETHNICGROUP_MAJOR"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "flagged": true
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MAJOR",
+                "l": "ETHNICGROUP_MAJOR"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-flag",
+    "description": "Flag rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MINOR",
+                "l": "ETHNICGROUP_MINOR"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "flagged": true
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "ETHNICGROUP_MINOR",
+                "l": "ETHNICGROUP_MINOR"
+              }
+            }
+          ]
+        },
+        {
+          "invert": false,
+          "expression": "row.flagged",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Flagged Rows",
+          "omitBlank": false,
+          "columnName": "",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "row.flagged",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Flagged Rows",
+          "omitBlank": false,
+          "columnName": "",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "FSM_status",
+                "l": "FSM_status"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Characteristic",
+    "columnName": "Characteristic"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Major_characteristic_category",
+    "columnName": "Major_characteristic_category"
+  }
+]
