@@ -5,6 +5,8 @@ Process
 
 ##Data
 
+Data processing and cleansing developed through *** stages described below.
+
 ###Stage 1
 
 After a first analysis of the set of files that were published, we originally decided to ignore all data but for the contents of the [*SFR05_2014_Underlying_data.zip*](data/raw/SFR05_2014_Underlying_data.zip) file, as our intention was to prepare the data for exploration without necessarily considering the conclusions that the publisher has already drawn. The zip file's contents are in the [*01_stage_1*](data/processed/01_stage_1/) folder.
@@ -22,25 +24,25 @@ In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical 
 ####Source: *SFR05_2014_UD_LA_1.csv*
 
 The output files are:
-- Achievements_by_EAL.csv
-- Achievements_by_FSM.csv
-- Achievements_by_SEN_provision.csv
-- Achievements_by_SEN_type.csv
-- Achievements_by_disadvantage.csv
-- Achievements_by_disadvantaged_schools.csv
-- Achievements_by_ethnicity.csv
+- *Achievements_by_EAL.csv*
+- *Achievements_by_FSM.csv*
+- *Achievements_by_SEN_provision.csv*
+- *Achievements_by_SEN_type.csv*
+- *Achievements_by_disadvantage.csv*
+- *Achievements_by_disadvantaged_schools.csv*
+- *Achievements_by_ethnicity.csv*
 
 For each of the files, we:
 - removed any empty rows
 - removed any redundant columns: e.g. "Country_code_9_digit", "Country_code" and "Country_name" that have the same values for all records, respectively "E92000001", 921 and "England"
-- identified and removed any rows with consolidated data from other rows (totals, etc.)
+- identified and removed any rows that had consolidated data from other rows (totals, etc.)
 
 When necessary, we 'specialised' the contents of the *Characteristic_category* column, e.g. in *Achievements_by_SEN_provision.csv* we highlighted that "School Action" and "School Action+" are SEN categories without a statement.
 
 ####Source: *SFR05_2014_UD_LA_2.csv*
 
 The output files are:
-- Achievements_by_SEN_provision_and_ethnicity.csv
+- *Achievements_by_SEN_provision_and_ethnicity.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
