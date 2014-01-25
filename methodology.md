@@ -19,9 +19,9 @@ A good example is the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_nati
 
 ###Stage 2
 
-In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](data/processed/02_stage_2/). Below is the description of each of the output files. Data is still in .csv format, and each file is accompanied by the OpenRefine operation history required to get there.
+In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](data/processed/02_stage_2/). Below is the description of each of the output files. Data is still in .csv format.
 
-####Source: *SFR05_2014_UD_LA_1.csv*
+####Source: *SFR05_2014_UD_national_1.csv*
 
 The output files are:
 - *Achievements_by_EAL.csv*
@@ -32,6 +32,8 @@ The output files are:
 - *Achievements_by_disadvantaged_schools.csv*
 - *Achievements_by_ethnicity.csv*
 
+Note that all files distinguish also by gender, but that is not specified in the filename.
+
 For each of the files, we:
 - removed any empty rows
 - removed any redundant columns: e.g. "Country_code_9_digit", "Country_code" and "Country_name" that have the same values for all records, respectively "E92000001", 921 and "England"
@@ -39,30 +41,33 @@ For each of the files, we:
 
 When necessary, we 'specialised' the contents of the *Characteristic_category* column, e.g. in *Achievements_by_SEN_provision.csv* we highlighted that "School Action" and "School Action+" are SEN categories without a statement.
 
-####Source: *SFR05_2014_UD_LA_2.csv*
+The files were processed using OpenRefine. The operation history for each file is in [scripts/stage_2](script/stage_2).
 
-The output files are:
+####Source: *SFR05_2014_UD_national_2.csv*
+
+The output files is:
 - *Achievements_by_SEN_provision_and_ethnicity.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
+####Source: *SFR05_2014_UD_LA_1.csv*
 
+The output files is:
+- *Achievements_by_LA.csv*
 
+For each of the files, we:
+- identified and removed any rows that had consolidated data from other rows (totals, etc.)
+- identified and removed all redundant rows that had totals for boys and girls belonging to the same category
 
+The files were processed using the [Achievements_by_LA.R](scripts/stage_2/Achievements_by_LA.R) R script.
 
+####Source: *SFR05_2014_UD_LA_2.csv*
 
-****content below this line needs re-writing
+The output files is:
+- *Achievements_by_LA_et_al.csv*
 
-Unfortunately, the key lists the documents but does not explain what they are. Some of the files had the same name but for a "1" or "2" suffix. We started from analysing those assuming they were the same dataset split just for keeping the filesize smaller.
-
-- SFR05_2014_UD_LA_*x*.csv: although the files appear to be similar, "1" has 24 more columns
-
-- SFR05_2014_UD_national_1.csv: the file had empty rows, that were removed
-
-- SFR05_2014_UD_national_2.csv: the file had empty rows, that were removed. The file appears to summarise the population by SEN (special educational needs) status only.
-
+The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
 ##Process
-
 
 ##Solution
