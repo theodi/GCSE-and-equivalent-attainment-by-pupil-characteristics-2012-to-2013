@@ -13,11 +13,11 @@ Among the contents, [*SFR05_2014_UD_metadata.txt*](data/processed/01_stage_1/SFR
 
 All the csv tables were loaded into [OpenRefine](http://openrefine.org/) for preliminary analysis. We soon realised that we could not interpret the datasets without studying the final reports, too. It is like if much of the documentation for the data was captured within the final reports only.
 
-A good example is the two SFR05_2014_UD_national_*x*.csv tables. Despite their names, the latter is not a continuation of the former. The first file includes several perspectives (pupils achievements by EAL, by FSM, by SEN provision and more). The second file includes one perspective only: by SEN privison *and* ethinicity, hence requiring a higher number of columns, hence the separate file. All of this was clear after studying one the final reports, [SFR05_2014_National_and_LA_tables.xls](data/raw/SFR05_2014_National_and_LA_tables.xls). 
+A good example is the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_national_2.csv* tables. Despite their names, the latter is not a continuation of the former. The first file includes several perspectives (pupils achievements by EAL, by FSM, by SEN provision and more). The second file includes one perspective only: by SEN provison *and* ethinicity, hence requiring a higher number of columns, hence the separate file. All of this was clear after studying one the final reports, [SFR05_2014_National_and_LA_tables.xls](data/raw/SFR05_2014_National_and_LA_tables.xls). 
 
 ###Stage 2
 
-In stage 2 we re-organised the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](processed/data/02_stage_2/). Below is the description of each of the output files. Data is still in .csv format, and each file is accompanied by the OpenRefine operation history required to get there.
+In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](data/processed/02_stage_2/). Below is the description of each of the output files. Data is still in .csv format, and each file is accompanied by the OpenRefine operation history required to get there.
 
 ####Source: *SFR05_2014_UD_LA_1.csv*
 
