@@ -16,8 +16,8 @@ Below is a description of the contents in this project, by folder.
     - *raw*: the source publication webpage, dataset and documentation as found at the source web address
     - *preprocessed*: selected datasets from the 'raw' folder, cleansed and homogenised according to data science best practices
 
-##Process
-The detailed process is described in [process.md](process.md).
+##Methodology
+The detailed methodology is described in [methodology.md](methodology.md).
 
 ##Licence
 ![Open Government Licence v2.0](http://www.nationalarchives.gov.uk/images/infoman/ogl-symbol-41px-retina-black.png "Open Government Licence v2.0") The source data was made available by the DfE under the [Open Government Licence v2.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2).
