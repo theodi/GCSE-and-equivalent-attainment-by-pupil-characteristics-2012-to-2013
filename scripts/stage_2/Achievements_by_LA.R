@@ -1,3 +1,5 @@
+# This script assumes that R's working directory is the project's root folder
+
 library(data.table)
 
 cleanseLAFiles <- function (inFile, outFile) {
@@ -7,6 +9,7 @@ cleanseLAFiles <- function (inFile, outFile) {
     d <- d[LA_code_9_digit != ""]
     # drop all columns whose name contain '_all_' 
     d[ , colnames(d)[grep("[\\s\\S]*_all_[\\s\\S]*", colnames(d))] := NULL]
+    # save the file
     write.csv(d, outFile, row.names = FALSE)
 }
 

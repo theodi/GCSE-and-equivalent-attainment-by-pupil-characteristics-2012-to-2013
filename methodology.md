@@ -45,21 +45,21 @@ The files were processed using OpenRefine. The operation history for each file i
 
 ####Source: *SFR05_2014_UD_national_2.csv*
 
-The output files is:
+The output file is:
 - *Achievements_by_SEN_provision_and_ethnicity.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
 ####Source: *SFR05_2014_UD_LA_1.csv*
 
-The output files is:
+The output file is:
 - *Achievements_by_LA.csv*
 
 For each of the files, we:
 - identified and removed any rows that had consolidated data from other rows (totals, etc.)
-- identified and removed all redundant rows that had totals for boys and girls belonging to the same category
+- identified and removed all redundant columns that had totals for boys and girls belonging to the same category
 
-The files were processed using the [Achievements_by_LA.R](scripts/stage_2/Achievements_by_LA.R) R script.
+The files were processed using the [*Achievements_by_LA.R*](scripts/stage_2/Achievements_by_LA.R) R script.
 
 ####Source: *SFR05_2014_UD_LA_2.csv*
 
