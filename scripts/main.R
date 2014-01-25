@@ -10,8 +10,6 @@ file.remove("./data/processed/SFR05_2014_Underlying_data.zip")
 
 SFR05_2014_UD_LA <- do.call("rbind", lapply(c("./data/processed/SFR05_2014_UD_LA_1.csv", "./data/processed/SFR05_2014_UD_LA_2.csv"), function (datasetFilename) {
 
-    print(datasetFilename)
-    
     # I read the file
     d <- data.table(read.csv(datasetFilename, na.strings = "N/A", stringsAsFactors = FALSE))
     
