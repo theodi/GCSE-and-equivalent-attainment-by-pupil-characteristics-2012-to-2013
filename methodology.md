@@ -87,6 +87,7 @@ The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 ####Source: *SFR05_2014_UD_residency.csv*
 
 The output files are:
+- *Attainments_by_school_region_and_rurality_detail.csv*
 - *Attainments_by_school_LAD.csv*
 - ***ongoing
 

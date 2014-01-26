@@ -1,0 +1,152 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code_9_digit",
+    "columnName": "Country_code_9_digit"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_code",
+    "columnName": "Country_code"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Country_name",
+    "columnName": "Country_name"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "Region_code_9_digit",
+          "omitBlank": false,
+          "columnName": "Region_code_9_digit",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-flag",
+    "description": "Flag rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "LAD_code_9_digit",
+          "omitBlank": false,
+          "columnName": "LAD_code_9_digit",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    },
+    "flagged": true
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "row.flagged",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Flagged Rows",
+          "omitBlank": false,
+          "columnName": "",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column LAD_code_9_digit",
+    "columnName": "LAD_code_9_digit"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column LAD_code",
+    "columnName": "LAD_code"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column LAD_name",
+    "columnName": "LAD_name"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "Rurality",
+          "omitBlank": false,
+          "columnName": "Rurality",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Rurality",
+          "omitBlank": false,
+          "columnName": "Rurality",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Rural",
+                "l": "Rural"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    }
+  }
+]

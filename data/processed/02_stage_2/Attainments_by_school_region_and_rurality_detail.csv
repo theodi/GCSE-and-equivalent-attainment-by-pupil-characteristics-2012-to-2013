@@ -1,0 +1,37 @@
+Region_code_9_digit,Region_code,Region_name,Rurality,B1B2den_13,KS4_LEVEL2_13,KS4_LEVEL2_EM_13,KS4_LEVEL1_13,KS4_LEVEL1_EM_13,KS4_L2BASICS_13,KS4_EBACC_E_13,KS4_EBACC_13
+E12000001,A,North East,Urban,25419,22319,15065,24271,23820,15159,8418,5050
+E12000001,A,North East,Rural - town and fringe,3202,2852,1940,3068,3028,1947,1029,x
+E12000001,A,North East,Rural - village,153,x,x,139,135,x,x,x
+E12000001,A,North East,Rural - hamlet and isolated dwelling,20,x,x,9,5,x,x,x
+E12000002,B,North West,Urban,72666,60582,43125,69408,68237,43665,25245,16054
+E12000002,B,North West,Rural - town and fringe,5049,4300,3330,4978,4924,3362,2181,1451
+E12000002,B,North West,Rural - village,725,595,507,713,700,514,344,248
+E12000002,B,North West,Rural - hamlet and isolated dwelling,1805,1490,1111,1745,1711,1132,700,401
+E12000003,D,Yorkshire and the Humber,Urban,49669,42193,29336,47663,46717,29630,14997,9506
+E12000003,D,Yorkshire and the Humber,Rural - town and fringe,6390,5277,3879,6216,6107,3903,2228,1473
+E12000003,D,Yorkshire and the Humber,Rural - village,1451,1260,1035,1406,1399,1043,626,443
+E12000003,D,Yorkshire and the Humber,Rural - hamlet and isolated dwelling,751,589,429,723,718,439,319,171
+E12000004,E,East Midlands,Urban,38490,31637,22426,36682,36060,22698,12551,7863
+E12000004,E,East Midlands,Rural - town and fringe,9831,8338,6251,9586,9487,6313,3619,2268
+E12000004,E,East Midlands,Rural - village,1427,x,x,1399,1384,x,x,x
+E12000004,E,East Midlands,Rural - hamlet and isolated dwelling,438,x,x,418,413,x,x,x
+E12000005,F,West Midlands,Urban,57488,49394,34133,55283,54177,34402,17701,10930
+E12000005,F,West Midlands,Rural - town and fringe,4278,3573,2868,4166,4099,2883,1730,1161
+E12000005,F,West Midlands,Rural - village,1354,1146,839,1340,1310,851,459,317
+E12000005,F,West Midlands,Rural - hamlet and isolated dwelling,1310,1022,761,1240,1229,773,465,267
+E12000006,G,East,Urban,51093,40798,30194,48841,48029,30664,17899,11344
+E12000006,G,East,Rural - town and fringe,9078,7153,5670,8778,8661,5766,3981,2398
+E12000006,G,East,Rural - village,2628,2027,1618,2528,2506,1644,988,652
+E12000006,G,East,Rural - hamlet and isolated dwelling,2156,1697,1355,2072,2054,1394,858,501
+E12000007,H,London,Urban,75705,63884,49209,73020,71856,49837,32318,21655
+E12000007,H,London,Rural - town and fringe,147,137,85,140,140,85,3,x
+E12000007,H,London,Rural - village,215,193,148,209,209,155,31,x
+E12000007,H,London,Rural - hamlet and isolated dwelling,0,0,0,0,0,0,0,0
+E12000008,J,South East,Urban,78038,64390,48684,74680,73509,49299,28349,19193
+E12000008,J,South East,Rural - town and fringe,8122,6766,5200,7901,7803,5270,2826,1994
+E12000008,J,South East,Rural - village,2277,1727,1377,2196,2179,1406,854,539
+E12000008,J,South East,Rural - hamlet and isolated dwelling,1397,1120,844,1310,1296,856,632,376
+E12000009,K,South West,Urban,41913,33629,24575,40146,39223,24930,14521,9234
+E12000009,K,South West,Rural - town and fringe,9740,7653,6048,9508,9390,6140,3914,2503
+E12000009,K,South West,Rural - village,2119,1699,1341,2038,2002,1351,822,538
+E12000009,K,South West,Rural - hamlet and isolated dwelling,2577,1991,1546,2448,2426,1577,1027,587
