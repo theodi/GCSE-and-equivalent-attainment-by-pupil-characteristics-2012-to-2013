@@ -59,11 +59,7 @@ Source file | Destination file(s)
 ----------- | ------------------- 
 *SFR05_2014_UD_LA_1.csv* | *Attainments_by_LA.csv*
 
-For each of the files, we:
-- identified and removed any rows that had consolidated data from other rows (totals, etc.)
-- identified and removed all redundant columns that had totals for boys and girls belonging to the same category
-
-The files were processed using the *Attainments_by_LA.R* R script in the [scripts/stage_2](script/stage_2) folder..
+The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
 ---
 
@@ -96,3 +92,7 @@ Source file | Destination file(s)
 *SFR05_2014_UD_school_location.csv* | *Attainments_by_school_region_and_rurality_detail.csv*<br />*Attainments_by_school_LAD.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_national_1.csv*.
+
+---
+
+Finally, all summary columns (e.g. "NATden_all_13" with the sum of "NATden_girls_13" and "NATden_boys_13") have been removed across all files by running the *removeSummaryColumns.R* script in the [scripts/stage_2](script/stage_2) folder.
