@@ -5,8 +5,8 @@ Methodology
 
 Data processing and cleansing developed through the *** stages described below.
 
-- [Stage 1](#stage-1)
-- [Stage 2](#stage-2)
+- [Stage 1](#stage-1): choice of which of the original files to further process and semantic analysis
+- [Stage 2](#stage-2): normalisation 
 
 ###Stage 1
 
@@ -51,7 +51,7 @@ Source file | Destination file(s)
 ----------- | ------------------- 
 *SFR05_2014_UD_national_2.csv* | *Attainments_by_SEN_provision_and_ethnicity.csv*
 
-The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
+The operations on the files were the same as for *SFR05_2014_UD_national_1.csv*.
 
 ---
 
@@ -79,7 +79,7 @@ Source file | Destination file(s)
 ----------- | ------------------- 
 *SFR05_2014_UD_parliamentary_constituency.csv* | *Attainments_by_parliamentary_constituency.csv*
 
-The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
+The operations on the files were the same as for *SFR05_2014_UD_national_1.csv*.
 
 ---
 
@@ -87,7 +87,7 @@ Source file | Destination file(s)
 ----------- | ------------------- 
 *SFR05_2014_UD_residency.csv* | *Attainments_by_residency_region_IDACI_rurality.csv*<br />*Attainments_by_residency_region_and_rurality_detail.csv*<br />*Attainments_by_residency_LAD.csv*
 
-The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
+The operations on the files were the same as for *SFR05_2014_UD_national_1.csv*.
 
 ---
 
@@ -95,4 +95,4 @@ Source file | Destination file(s)
 ----------- | ------------------- 
 *SFR05_2014_UD_school_location.csv* | *Attainments_by_school_region_and_rurality_detail.csv*<br />*Attainments_by_school_LAD.csv*
 
-The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
+The operations on the files were the same as for *SFR05_2014_UD_national_1.csv*.
