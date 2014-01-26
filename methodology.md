@@ -1,11 +1,12 @@
-Process
-=======
+Methodology
+===========
 
-##Summary
+##Introduction
 
-##Data
+Data processing and cleansing developed through the *** stages described below.
 
-Data processing and cleansing developed through *** stages described below.
+- [Stage 1](#stage-1)
+- [Stage 2](#stage-2)
 
 ###Stage 1
 
@@ -19,92 +20,73 @@ A good example is the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_nati
 
 ###Stage 2
 
-In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](data/processed/02_stage_2/). The names of the files produced during this stage are self-explanatory
+In stage 2 we normalised the data in the *01_stage_1* folder trying to achieve a "canonical form" for the same. Redundant data was removed and the original csv files were split in specialised csv files each of which presented one and just one perspective on the data. The result is in [*01_stage_2*](data/processed/02_stage_2/). The names of the files produced during this stage are self-explanatory.
 
+Below is the description of which output files were produced by which input files.
 
-Below is the description of each of the output files. Data is still in .csv format.
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv*<br />*Attainments_by_FSM.csv*<br />*Attainments_by_SEN_provision.csv*<br />*Attainments_by_SEN_type.csv*<br />*Attainments_by_disadvantage.csv*<br />*Attainments_by_disadvantaged_schools.csv*<br />*Attainments_by_ethnicity.csv* 
 
-Source file | Destination file | Description
------------ | ---------------- | -----------
-*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv*<br />*Attainments_by_FSM.csv* | 
-
-
-####Source: *SFR05_2014_UD_national_1.csv*
-
-The output files are:
-- *Attainments_by_EAL.csv*
-- *Attainments_by_FSM.csv*
-- *Attainments_by_SEN_provision.csv*
-- *Attainments_by_SEN_type.csv*
-- *Attainments_by_disadvantage.csv*
-- *Attainments_by_disadvantaged_schools.csv*
-- *Attainments_by_ethnicity.csv*
-
-Note that all files distinguish also by gender, but that is not specified in the filename.
+Note that all files distinguish attainment also by the pupil's gender, but that is not specified in the filename.
 
 For each of the files, we:
 - removed any empty rows
 - removed any redundant columns: e.g. "Country_code_9_digit", "Country_code" and "Country_name" that have the same values for all records, respectively "E92000001", 921 and "England"
-- identified and removed any rows that had consolidated data from other rows (totals, etc.)
+- identified and removed any rows that had consolidated data from other rows (totals by region, totals by rurality, etc.)
 
-When necessary, we 'specialised' the contents of the *Characteristic_category* column, e.g. in *Attainments_by_SEN_provision.csv* we highlighted that "School Action" and "School Action+" are SEN categories without a statement.
+When necessary, we 'specialised' the contents of the *Characteristic_category* column, e.g. in *Attainments_by_SEN_provision.csv* we highlighted that "School Action" and "School Action+" are SEN categories "without a statement".
 
-The files were processed using OpenRefine. The operation history for each file is in [scripts/stage_2](script/stage_2).
+The files were processed using OpenRefine. The operation history for each file is in the [scripts/stage_2](script/stage_2) folder. The filenames are the same as the csv they produced, but end with a *.openrefine.json* extension.
 
-####Source: *SFR05_2014_UD_national_2.csv*
+---
 
-The output file is:
-- *Attainments_by_SEN_provision_and_ethnicity.csv*
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_national_2.csv* | *Attainments_by_SEN_provision_and_ethnicity.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
-####Source: *SFR05_2014_UD_LA_1.csv*
+---
 
-The output file is:
-- *Attainments_by_LA.csv*
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_LA_1.csv* | *Attainments_by_LA.csv*
 
 For each of the files, we:
 - identified and removed any rows that had consolidated data from other rows (totals, etc.)
 - identified and removed all redundant columns that had totals for boys and girls belonging to the same category
 
-The files were processed using the [*Attainments_by_LA.R*](scripts/stage_2/Attainments_by_LA.R) R script.
+The files were processed using the *Attainments_by_LA.R* R script in the [scripts/stage_2](script/stage_2) folder..
 
-####Source: *SFR05_2014_UD_LA_2.csv*
+---
 
-The output files is:
-- *Attainments_by_LA_et_al.csv*
-
-The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
-
-####Source: *SFR05_2014_UD_parliamentary_constituency.csv*
-
-The output file is:
-- *Attainments_by_parliamentary_constituency.csv*
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_LA_2.csv* | *Attainments_by_LA_et_al.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
-####Source: *SFR05_2014_UD_residency.csv*
+---
 
-The output files are:
-- *Attainments_by_residency_region_IDACI_rurality.csv*
-- *Attainments_by_residency_region_and_rurality_detail.csv*
-- *Attainments_by_residency_LAD.csv*
-
-The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
-
-####Source: *SFR05_2014_UD_residency.csv*
-
-The output files are:
-- *Attainments_by_school_region_and_rurality_detail.csv*
-- *Attainments_by_school_LAD.csv*
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_parliamentary_constituency.csv* | *Attainments_by_parliamentary_constituency.csv*
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
+---
 
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_residency.csv* | *Attainments_by_residency_region_IDACI_rurality.csv*<br />*Attainments_by_residency_region_and_rurality_detail.csv*<br />*Attainments_by_residency_LAD.csv*
 
+The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
+---
 
+Source file | Destination file(s) 
+----------- | ------------------- 
+*SFR05_2014_UD_school_location.csv* | *Attainments_by_school_region_and_rurality_detail.csv*<br />*Attainments_by_school_LAD.csv*
 
-##Process
-
-##Solution
+The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
