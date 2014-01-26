@@ -3,10 +3,10 @@ Methodology
 
 ##Introduction
 
-Data processing and cleansing developed through the *** stages described below.
+Data processing and cleansing developed through the two stages described below:
 
 - [Stage 1](#stage-1): choice of which of the original files to further process and semantic analysis
-- [Stage 2](#stage-2): normalisation 
+- [Stage 2](#stage-2): normalisation and identification of missing data
 
 ###Stage 1
 
@@ -38,14 +38,16 @@ Note that all files distinguish attainment also by the pupil's gender, but that 
 
 For each of the files, we:
 - removed any empty rows
-- removed any redundant columns: e.g. "Country_code_9_digit", "Country_code" and "Country_name" that have the same values for all records, respectively "E92000001", 921 and "England"
+- removed the "Country_code_9_digit", "Country_code" and "Country_name" columns that have the same values for all records, respectively "E92000001", 921 and "England"
 - identified and removed any rows that had consolidated data from other rows (totals by region, totals by rurality, etc.)
 
 When necessary, we 'specialised' the contents of the *Characteristic_category* column, e.g. in *Attainments_by_SEN_provision.csv* we highlighted that "School Action" and "School Action+" are SEN categories "without a statement".
 
 The files were processed using OpenRefine. The operation history for each file is in the [scripts/stage_2](script/stage_2) folder. The filenames are the same as the csv they produced, but end with a *.openrefine.json* extension.
 
-**Issue** - The figures in the categorisation by primary need status do not sum up. Our assumption is that the "All SEN primary need pupils" row in the original file is supposed to be the sum of all other rows. This is further hinted by the fact that the rows include a "Other Difficulty/Disability" row, and that the sum of all other rows is always less than the "All SEN primary need pupils" row. There is instead, on average, a 1.65% gap that is unaccounted for. To address this we have created a "Not classified" row with the number of unaccounted pupils. The matter should be investigated with the source of the original data.
+**Issue** - The figures in the categorisation by primary need status do not sum up. Our assumption is that the "All SEN primary need pupils" row in the original file is supposed to be the sum of all other rows. This is further hinted by the fact that the rows include a "Other Difficulty/Disability" row, and that the sum of all rows is always less than the "All SEN primary need pupils" row. There is instead, on average, a 1.65% gap that is unaccounted for. To address this we have created a "Not classified" row with the number of unaccounted pupils. The matter should be investigated with the source of the original data.
+
+Note that the above inconsistency somehow jumped to the eye, but the time we had available was not sufficient to run analogous cross-checks between the summary and non-summary rows across the entire dataset.
 
 ---
 
