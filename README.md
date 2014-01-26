@@ -1,6 +1,8 @@
 GCSE and equivalent attainment by pupil characteristics: 2012 to 2013
 =====================================================================
 
+#This repository is provisionally private, while awaiting to find out if it will be used for the Open Data Institute and Nesta's Open Data Challenge Series.
+
 ##Introduction
 
 This is an exercise in collecting, pre-processing and cleansing an open data dataset on education made available by the UK government's Department for Education (DfE). I chose the "GCSE and equivalent attainment by pupil characteristics: 2012 to 2013" dataset, published by the DfE only a few days ago, on 23rd January 2014.
