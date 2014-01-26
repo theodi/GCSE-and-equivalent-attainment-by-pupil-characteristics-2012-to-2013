@@ -10,13 +10,19 @@ Data processing and cleansing developed through the *** stages described below.
 
 ###Stage 1
 
-After a first analysis of the set of files that were published, we originally decided to ignore all data but for the contents of the [*SFR05_2014_Underlying_data.zip*](data/raw/SFR05_2014_Underlying_data.zip) file, as our intention was to prepare the data for exploration without necessarily considering the conclusions that the publisher has already drawn. The zip file's contents are in the [*01_stage_1*](data/processed/01_stage_1/) folder.
+After a first analysis of the set of files that were published, we originally decided to ignore all data but for the contents of the [*SFR05_2014_Underlying_data.zip*](data/raw/SFR05_2014_Underlying_data.zip) file. The rationale for this is that our intention is to prepare the data for exploration without considering the publisher's own conclusions and trying to be influenced by them as little as possible. The zip file's contents are now in the [*01_stage_1*](data/processed/01_stage_1/) folder.
 
-Among the contents, [*SFR05_2014_UD_metadata.txt*](data/processed/01_stage_1/SFR05_2014_UD_metadata.txt) was identified as their key. The file describes elements of the source datafiles' background, coverage, data quality and statistical disclosure (anonymisation). The document also has a full explaination of the acronyms used in the data and a description of the variable names. 
+Among the contents, [*SFR05_2014_UD_metadata.txt*](data/processed/01_stage_1/SFR05_2014_UD_metadata.txt) was identified as their key. The file describes elements of the source data's background, coverage, data quality and statistical disclosure (anonymisation). The document also has a full explaination of the acronyms used in the data and a description of the column names for each of the files. 
 
-All the csv tables were loaded into [OpenRefine](http://openrefine.org/) for preliminary analysis. We soon realised that we could not interpret the datasets without studying the final reports, too. It is like if much of the documentation for the data was captured within the final reports only.
+All the csv tables were loaded into OpenRefine for preliminary analysis. We soon realised that we could not interpret the datasets without studying the final reports, too, starting from [SFR05_2014_National_and_LA_tables.xls](data/raw/SFR05_2014_National_and_LA_tables.xls) where, by using formatting and indentation, the semantics of the data is clearly highlighted to the "human reader". 
 
-A good example is the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_national_2.csv* tables. Despite their names, the latter is not a continuation of the former. The first file includes several perspectives (pupils achievements by EAL, by FSM, by SEN provision and more). The second file includes one perspective only: by SEN provison *and* ethinicity, hence requiring a higher number of columns, hence the separate file. All of this was clear after studying one the final reports, [SFR05_2014_National_and_LA_tables.xls](data/raw/SFR05_2014_National_and_LA_tables.xls). 
+A very good example is the *SFR05_2014_UD_residency.csv* file. Like most other files in the dataset, the file includes several **alternative** perspectives on the same data, that can be isolated from each other only by interpreting and filtering the values in the rows. The diagram below shows how the original file was 'distilled' into its three different perspectives.
+
+![SFR05_2014_UD_residency.csv example](images/stage_2_example.svg "SFR05_2014_UD_residency.csv example")
+
+The filenames can also be misleading, e.g. the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_national_2.csv* files, are not one the continuation of the other, despite their names, and have different column sets.
+
+Please note that we are no saying that the data was in anyway 'faulty' at this stage, but it was of difficult interpretarion and re-use because of some of the choices that were made by the issuer.
 
 ###Stage 2
 
