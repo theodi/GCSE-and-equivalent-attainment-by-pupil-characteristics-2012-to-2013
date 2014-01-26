@@ -18,7 +18,7 @@ All the csv tables were loaded into OpenRefine for preliminary analysis. We soon
 
 A very good example is the *SFR05_2014_UD_residency.csv* file. Like most other files in the dataset, the file includes several **alternative** perspectives on the same data, that can be isolated from each other only by interpreting and filtering the values in the rows. The diagram below shows how the original file was 'distilled' into its three different perspectives.
 
-![example](images/stage_2_example.svg "example")
+![SFR05_2014_UD_residency.csv example](images/stage_2_example.png "SFR05_2014_UD_residency.csv example")
 
 The filenames can also be misleading, e.g. the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_national_2.csv* files, are not one the continuation of the other, despite their names, and have different column sets.
 
