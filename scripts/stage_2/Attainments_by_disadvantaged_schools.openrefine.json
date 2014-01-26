@@ -15,8 +15,31 @@
     "columnName": "Country_code"
   },
   {
-    "op": "core/column-removal",
-    "description": "Remove column Characteristic",
-    "columnName": "Characteristic"
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": true,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": false,
+          "name": "Characteristic",
+          "omitBlank": false,
+          "columnName": "Characteristic",
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "Disadvantaged_schools",
+                "l": "Disadvantaged_schools"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "record-based"
+    }
   }
 ]

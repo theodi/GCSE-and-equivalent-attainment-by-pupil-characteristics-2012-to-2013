@@ -20,35 +20,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
+          "invert": true,
           "expression": "value",
           "selectError": false,
           "omitError": false,
           "selectBlank": true,
-          "name": "Region_code_9_digit",
+          "name": "LAD_code_9_digit",
           "omitBlank": false,
-          "columnName": "Region_code_9_digit",
-          "type": "list",
-          "selection": []
-        }
-      ],
-      "mode": "row-based"
-    }
-  },
-  {
-    "op": "core/row-removal",
-    "description": "Remove rows",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "value",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": true,
-          "name": "IDACI_decile",
-          "omitBlank": false,
-          "columnName": "IDACI_decile",
+          "columnName": "LAD_code_9_digit",
           "type": "list",
           "selection": []
         }
@@ -82,9 +61,51 @@
           "selectError": false,
           "omitError": false,
           "selectBlank": true,
+          "name": "IDACI_decile",
+          "omitBlank": false,
+          "columnName": "IDACI_decile",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
           "name": "Rurality",
           "omitBlank": false,
           "columnName": "Rurality",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "Region_code_9_digit",
+          "omitBlank": false,
+          "columnName": "Region_code_9_digit",
           "type": "list",
           "selection": []
         }

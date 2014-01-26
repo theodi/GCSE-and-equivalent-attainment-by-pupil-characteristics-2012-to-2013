@@ -20,35 +20,14 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
+          "invert": true,
           "expression": "value",
           "selectError": false,
           "omitError": false,
           "selectBlank": true,
-          "name": "Rurality",
+          "name": "LAD_code_9_digit",
           "omitBlank": false,
-          "columnName": "Rurality",
-          "type": "list",
-          "selection": []
-        }
-      ],
-      "mode": "row-based"
-    }
-  },
-  {
-    "op": "core/row-removal",
-    "description": "Remove rows",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "value",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": true,
-          "name": "Region_code_9_digit",
-          "omitBlank": false,
-          "columnName": "Region_code_9_digit",
+          "columnName": "LAD_code_9_digit",
           "type": "list",
           "selection": []
         }
@@ -81,6 +60,27 @@
           "expression": "value",
           "selectError": false,
           "omitError": false,
+          "selectBlank": true,
+          "name": "Rurality",
+          "omitBlank": false,
+          "columnName": "Rurality",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
           "selectBlank": false,
           "name": "Rurality",
           "omitBlank": false,
@@ -94,9 +94,39 @@
               }
             }
           ]
-        },
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
         {
           "invert": false,
+          "expression": "value",
+          "selectError": false,
+          "omitError": false,
+          "selectBlank": true,
+          "name": "Region_code_9_digit",
+          "omitBlank": false,
+          "columnName": "Region_code_9_digit",
+          "type": "list",
+          "selection": []
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "invert": true,
           "expression": "value",
           "selectError": false,
           "omitError": false,
@@ -110,28 +140,6 @@
       ],
       "mode": "row-based"
     }
-  },
-  {
-    "op": "core/row-flag",
-    "description": "Flag rows",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "value",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": true,
-          "name": "IDACI_decile",
-          "omitBlank": false,
-          "columnName": "IDACI_decile",
-          "type": "list",
-          "selection": []
-        }
-      ],
-      "mode": "row-based"
-    },
-    "flagged": true
   },
   {
     "op": "core/column-removal",

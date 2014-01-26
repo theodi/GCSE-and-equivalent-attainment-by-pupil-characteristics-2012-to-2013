@@ -20,28 +20,7 @@
     "engineConfig": {
       "facets": [
         {
-          "invert": false,
-          "expression": "value",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": true,
-          "name": "Region_code_9_digit",
-          "omitBlank": false,
-          "columnName": "Region_code_9_digit",
-          "type": "list",
-          "selection": []
-        }
-      ],
-      "mode": "row-based"
-    }
-  },
-  {
-    "op": "core/row-flag",
-    "description": "Flag rows",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
+          "invert": true,
           "expression": "value",
           "selectError": false,
           "omitError": false,
@@ -51,35 +30,6 @@
           "columnName": "LAD_code_9_digit",
           "type": "list",
           "selection": []
-        }
-      ],
-      "mode": "row-based"
-    },
-    "flagged": true
-  },
-  {
-    "op": "core/row-removal",
-    "description": "Remove rows",
-    "engineConfig": {
-      "facets": [
-        {
-          "invert": false,
-          "expression": "row.flagged",
-          "selectError": false,
-          "omitError": false,
-          "selectBlank": false,
-          "name": "Flagged Rows",
-          "omitBlank": false,
-          "columnName": "",
-          "type": "list",
-          "selection": [
-            {
-              "v": {
-                "v": false,
-                "l": "false"
-              }
-            }
-          ]
         }
       ],
       "mode": "row-based"
@@ -111,9 +61,9 @@
           "selectError": false,
           "omitError": false,
           "selectBlank": true,
-          "name": "Rurality",
+          "name": "Region_code_9_digit",
           "omitBlank": false,
-          "columnName": "Rurality",
+          "columnName": "Region_code_9_digit",
           "type": "list",
           "selection": []
         }
@@ -131,7 +81,7 @@
           "expression": "value",
           "selectError": false,
           "omitError": false,
-          "selectBlank": false,
+          "selectBlank": true,
           "name": "Rurality",
           "omitBlank": false,
           "columnName": "Rurality",

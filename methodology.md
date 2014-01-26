@@ -32,7 +32,7 @@ Below is the description of which output files were produced by which input file
 
 Source file | Destination file(s) 
 ----------- | ------------------- 
-*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv*<br />*Attainments_by_FSM.csv*<br />*Attainments_by_SEN_provision.csv*<br />*Attainments_by_SEN_type.csv*<br />*Attainments_by_disadvantage.csv*<br />*Attainments_by_disadvantaged_schools.csv*<br />*Attainments_by_ethnicity.csv* 
+*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv*<br />*Attainments_by_FSM.csv*<br />*Attainments_by_SEN_provision.csv*<br />*Attainments_by_primary_need_status.csv*<br />*Attainments_by_disadvantage.csv*<br />*Attainments_by_disadvantaged_schools.csv*<br />*Attainments_by_ethnicity.csv* 
 
 Note that all files distinguish attainment also by the pupil's gender, but that is not specified in the filename.
 
@@ -44,6 +44,8 @@ For each of the files, we:
 When necessary, we 'specialised' the contents of the *Characteristic_category* column, e.g. in *Attainments_by_SEN_provision.csv* we highlighted that "School Action" and "School Action+" are SEN categories "without a statement".
 
 The files were processed using OpenRefine. The operation history for each file is in the [scripts/stage_2](script/stage_2) folder. The filenames are the same as the csv they produced, but end with a *.openrefine.json* extension.
+
+**Issue** - The figures in the categorisation by primary need status do not sum up. We assumed that the "All SEN primary need pupils" row in the original file was supposed to be the sum of all other rows, that include a "Other Difficulty/Disability" row. There is instead, on average, a 1.65% gap that is unaccounted for. To address this we have created a "Not classified" row with the number of unaccounted pupils.
 
 ---
 
