@@ -19,7 +19,15 @@ A good example is the two *SFR05_2014_UD_national_1.csv* and *SFR05_2014_UD_nati
 
 ###Stage 2
 
-In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](data/processed/02_stage_2/). Below is the description of each of the output files. Data is still in .csv format.
+In stage 2 we re-organised the data in the *01_stage_1* folder in its canonical components. The result is in [*01_stage_2*](data/processed/02_stage_2/). The names of the files produced during this stage are self-explanatory
+
+
+Below is the description of each of the output files. Data is still in .csv format.
+
+Source file | Destination file | Description
+----------- | ---------------- | -----------
+*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv* \\n *Attainments_by_FSM.csv* | 
+
 
 ####Source: *SFR05_2014_UD_national_1.csv*
 
@@ -89,7 +97,6 @@ The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 The output files are:
 - *Attainments_by_school_region_and_rurality_detail.csv*
 - *Attainments_by_school_LAD.csv*
-- ***ongoing
 
 The operations on the files were the same as for *SFR05_2014_UD_LA_1.csv*.
 
