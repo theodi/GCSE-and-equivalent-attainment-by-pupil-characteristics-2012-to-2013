@@ -26,7 +26,7 @@ Below is the description of each of the output files. Data is still in .csv form
 
 Source file | Destination file | Description
 ----------- | ---------------- | -----------
-*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv* \\n *Attainments_by_FSM.csv* | 
+*SFR05_2014_UD_national_1.csv* | *Attainments_by_EAL.csv*<br />*Attainments_by_FSM.csv* | 
 
 
 ####Source: *SFR05_2014_UD_national_1.csv*
