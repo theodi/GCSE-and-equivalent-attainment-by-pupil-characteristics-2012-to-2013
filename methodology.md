@@ -45,7 +45,7 @@ When necessary, we 'specialised' the contents of the *Characteristic_category* c
 
 The files were processed using OpenRefine. The operation history for each file is in the [scripts/stage_2](script/stage_2) folder. The filenames are the same as the csv they produced, but end with a *.openrefine.json* extension.
 
-**Issue** - The figures in the categorisation by primary need status do not sum up. We assumed that the "All SEN primary need pupils" row in the original file was supposed to be the sum of all other rows, that include a "Other Difficulty/Disability" row. There is instead, on average, a 1.65% gap that is unaccounted for. To address this we have created a "Not classified" row with the number of unaccounted pupils.
+**Issue** - The figures in the categorisation by primary need status do not sum up. We expected that the "All SEN primary need pupils" row in the original file was supposed to be the sum of all other rows, that include a "Other Difficulty/Disability" row. There is instead, on average, a 1.65% gap that is unaccounted for. To address this we have created a "Not classified" row with the number of unaccounted pupils. The matter should be investigated with the source for the original data.
 
 ---
 
