@@ -3,6 +3,8 @@ GCSE and equivalent attainment by pupil characteristics: 2012 to 2013
 
 ##Methodology
 
+###Introduction
+
 Data processing and cleansing developed through the two stages described below:
 
 - [Stage 1](#stage-1): choice of which of the original files to further process and semantic analysis
