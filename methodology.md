@@ -1,12 +1,22 @@
-Methodology
-===========
+GCSE and equivalent attainment by pupil characteristics: 2012 to 2013
+=====================================================================
 
-##Introduction
+##Methodology
 
 Data processing and cleansing developed through the two stages described below:
 
 - [Stage 1](#stage-1): choice of which of the original files to further process and semantic analysis
 - [Stage 2](#stage-2): normalisation and identification of missing data
+
+Below is a description of the contents in this project, by folder.
+- *data*
+    - *raw*: the source publication webpage, dataset and documentation as found at the source web address
+    - *preprocessed*: selected datasets from the 'raw' folder, cleansed and homogenised according to data science best practices
+    	- *01_stage_1* this folder collects the parts of the raw data that the team selected as worth further processing 
+    	- *02_stage_2* this folder is the result of the first stage of processing, mainly aimed at making the contents of *01_stage_1* onto a canonical form according to the team's interpretation of the data. 
+- *images*: all images used for this documentation
+- *scripts*
+	- *stage_2*: the [OpenRefine](http://openrefine.org/) operation history and [R](http://www.r-project.org/) scripts used for the processing of stage 2.
 
 ###Stage 1
 
