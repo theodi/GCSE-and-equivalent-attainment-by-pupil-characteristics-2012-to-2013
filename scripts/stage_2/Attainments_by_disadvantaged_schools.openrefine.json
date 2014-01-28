@@ -39,7 +39,12 @@
           ]
         }
       ],
-      "mode": "record-based"
+      "mode": "row-based"
     }
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Characteristic",
+    "columnName": "Characteristic"
   }
 ]
