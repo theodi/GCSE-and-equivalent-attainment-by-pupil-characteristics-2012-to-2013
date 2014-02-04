@@ -13,7 +13,7 @@ Data processing and cleansing developed through the two stages described below:
 Below is a description of the contents in this project, by folder.
 - *data*
     - *raw*: the source publication webpage, dataset and documentation as found at the source web address
-    - *preprocessed*: selected datasets from the 'raw' folder, cleansed and homogenised according to data science best practices
+    - *processed*: selected datasets from the 'raw' folder, cleansed and homogenised according to data science best practices
     	- *01_stage_1* this folder collects the parts of the raw data that the team selected as worth further processing 
     	- *02_stage_2* this folder is the result of the first stage of processing, mainly aimed at making the contents of *01_stage_1* onto a canonical form according to the team's interpretation of the data. 
 - *images*: all images used for this documentation
