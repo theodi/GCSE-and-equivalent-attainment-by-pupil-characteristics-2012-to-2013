@@ -13,7 +13,7 @@ Data processing and cleansing developed through the two stages described below:
 Below is a description of the contents in this project, by folder.
 - *data*
     - *raw*: the source publication webpage, dataset and documentation as found at the source web address
-    - *preprocessed*: selected datasets from the 'raw' folder, cleansed and homogenised according to data science best practices
+    - *processed*: selected datasets from the 'raw' folder, cleansed and homogenised according to data science best practices
     	- *01_stage_1* this folder collects the parts of the raw data that the team selected as worth further processing 
     	- *02_stage_2* this folder is the result of the first stage of processing, mainly aimed at making the contents of *01_stage_1* onto a canonical form according to the team's interpretation of the data. 
 - *images*: all images used for this documentation
@@ -28,7 +28,7 @@ Among the contents, [*SFR05_2014_UD_metadata.txt*](data/processed/01_stage_1/SFR
 
 All the csv tables were loaded into OpenRefine for preliminary analysis. We soon realised that we could not interpret the datasets without studying the final reports, too, starting from [SFR05_2014_National_and_LA_tables.xls](data/raw/SFR05_2014_National_and_LA_tables.xls) where, by using formatting and indentation, the semantics of the data is clearly highlighted to the "human reader". 
 
-A very good example is the *SFR05_2014_UD_residency.csv* file. Like most other files in the dataset, the file includes several **alternative** perspectives on the same data, that can be isolated from each other only by interpreting and filtering the values in the rows. The diagram below shows how the original file was 'distilled' into its three different perspectives.
+A very good example is the *SFR05_2014_UD_residency.csv* file. Like most other files in the dataset, the file includes several **alternative** data cuts, that can be isolated from each other only by interpreting and filtering the values in the rows. The diagram below shows how the original file was 'distilled' into the three components that made it.
 
 ![SFR05_2014_UD_residency.csv example](images/stage_2_example.png "SFR05_2014_UD_residency.csv example")
 
